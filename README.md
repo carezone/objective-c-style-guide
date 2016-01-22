@@ -186,7 +186,6 @@ if (self) {
         * The `#pragma mark` groups should be sorted as:
             * Class methods
             * Lifecycle
-            * Getters
             * Methods
             * All other delegates & data sources
     * Define related methods together within `#pragma` groups
