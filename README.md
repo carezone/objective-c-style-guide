@@ -222,7 +222,7 @@ else {
 if (generalLee == nil)
 if (needsPaintJob == NO)
 if (theCreek != nil)
-if (jumpTheCreek == YES)
+if (shouldJumpTheCreek == YES)
 ```
 
 instead of
@@ -231,10 +231,11 @@ instead of
 if (!generalLee)
 if (!needsPaintJob)
 if (theCreek)
-if (jumpTheCreek)
+if (shouldJumpTheCreek)
 ```
 
 * Use _ for all instance variables, and put them in the implementation with a line break after `@implementation`
+* Prefer properties and auto synthesized instance variables wherever possible
 
 ```objective-c
 @implementation GeneralLeeViewController
