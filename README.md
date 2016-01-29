@@ -86,8 +86,7 @@ As a corollary, if you make a schema changes in your branch and later need to ma
 <TextEditorViewControllerDelegate, UITableViewDelegate>
 @end
 ```
-* Sort the instance variables, properties and methods alphabetically
-* Order methods as: properties, line break, class methods, line break, initializers, line break, instance methods (each group sorted alphabetically)
+* Order methods as: properties, line break, class methods, line break, initializers, line break, instance methods
 * When defining properties add `nonatomic` first with no spaces until after the )
 
 ```
@@ -187,11 +186,9 @@ if (self) {
         * The `#pragma mark` groups should be sorted as:
             * Class methods
             * Lifecycle
-            * Getters
             * Methods
-            * All other delegates & data sources sorted alphabetically
-    * within those sorted groups, sort the methods alphabetically
-    * When you use Xcode's list-of-methods drop down, the #pragma mark sections should be sorted and all the methods within each section should be sorted.
+            * All other delegates & data sources
+    * Define related methods together within `#pragma` groups
 
 * Case statements needing scope should have the curly brace on the same line as the case:
 
@@ -223,6 +220,8 @@ else {
 ```objective-c
 if (generalLee == nil)
 if (needsPaintJob == NO)
+if (theCreek != nil)
+if (shouldJumpTheCreek == YES)
 ```
 
 instead of
@@ -230,9 +229,12 @@ instead of
 ```objective-c
 if (!generalLee)
 if (!needsPaintJob)
+if (theCreek)
+if (shouldJumpTheCreek)
 ```
 
 * Use _ for all instance variables, and put them in the implementation with a line break after `@implementation`
+* Prefer properties and auto synthesized instance variables wherever possible
 
 ```objective-c
 @implementation GeneralLeeViewController
